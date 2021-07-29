@@ -29,7 +29,7 @@ int main(){
     int i, j;
     int C1, L1, C2, L2, M1, M2;
     char nome_arquivo1[10], nome_arquivo2[10], modelo[10];
-    
+
     pixel_t**imagem;
     
     FILE * arq1;

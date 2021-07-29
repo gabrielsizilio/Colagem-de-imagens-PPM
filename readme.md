@@ -1,4 +1,4 @@
-Codigo resposta do trabalho de faculdade!
+Codigo resposta de um exercício da faculdade!
 
 INSTRUÇÕES:
 "Você deve escrever um programa que lê duas imagens do tipo PPM colorido P3, da entrada padrão e que imprima na saída uma imagem PPM P3 que é a colagem das duas imagens lidas.

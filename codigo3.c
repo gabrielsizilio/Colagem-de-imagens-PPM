@@ -30,8 +30,6 @@ int main(){
     int C1, L1, C2, L2, M1, M2;
     char nome_arquivo1[10], nome_arquivo2[10], modelo[10];
     
-    pixel_t**imagem1;
-    pixel_t**imagem2;
     pixel_t**imagem;
     
     FILE * arq1;
@@ -64,12 +62,15 @@ int main(){
         return 1;
     }
 
-    for(i = 0; i < L1; i++){
+    for(i = 0; i < soma_linhas(L1, L2); i++){
         imagem[i] = (pixel_t*) malloc(maior_coluna(C1, C2) * sizeof(pixel_t));
         if(imagem[i] == NULL){
             return 2;
         }
+    }
 
+    /*ESCREVENDO DO ARQUIVO NO ESPAÇO ALOCADO'*/
+    for(i = 0; i < L1; i++){
         for(j = 0; j < maior_coluna(C1, C2); j++){
             
             if(j < C1){
@@ -86,11 +87,6 @@ int main(){
     }
 
     for(i = L1; i < soma_linhas(L1, L2); i++){
-        imagem[i] = (pixel_t*) malloc(maior_coluna(C1, C2) * sizeof(pixel_t));
-        if(imagem[i] == NULL){
-            return 2;
-        }
-
         for(j = 0; j < maior_coluna(C1, C2); j++){
             
             if(j < C2){
@@ -104,7 +100,6 @@ int main(){
                 imagem[i][j].b = M1;
             }
         }
-
     }
 
     /*ESCREVENDO NO ARQUIVO*/
@@ -127,7 +122,6 @@ int main(){
             
         }
     }
-
 
     for(i = 0; i < soma_linhas(L1, L2); i++){
         free(imagem[i]);

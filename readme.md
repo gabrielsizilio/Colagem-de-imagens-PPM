@@ -7,3 +7,5 @@ As imagens .ppm dadas na entrada serão do tipo P3, ascii colorido. Este formato
 As duas imagens passadas terão o seu número M (máximo de intensidade de componente de cor) iguais. Seu programa deve colar as duas imagens gerando uma nova imagem cujo número de colunas é igual ao máximo do número de colunas das duas imagens e cujo número de linhas é igual à soma do número de linhas das imagens. A primeira imagem passada deve ser aparecer no início da nova imagem gerada, começando no canto esquerdo superior. A segunda imagem passada deve aparecer logo abaixo do fim da primeira imagem, iniciando-se no canto esquerdo. Os pixeis da nova imagem gerada que não pertecerem a nenhuma das duas imagens devem ter a cor branca (representado por M M M). Seu programa deve imprimir a nova imagem resultante na saída padrão.
 
 Você NÃO pode supor tamanho máximo das duas imagens. Seu programa deve alocar dinamicamente a memória necessária, de acordo com os valores de C e L lidos. Você deve supor que os M's das duas imagens são IGUAIS."
+
+MALLOC, C, stdin, imagem PPM P3, matriz, alocação dinâmica;
